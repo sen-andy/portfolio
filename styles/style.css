@@ -2,7 +2,9 @@
 
 :root {
   --highlight: #eb4d4b;
-  --primary-text: #2f4858;
+  --dark-color: #2f4858;
+  --darker-color: #172b38;
+  --light-color: #E1ECF4;
 }
 
 * {
@@ -12,18 +14,16 @@
 }
 
 i {
-  color: var(--primary-text);
+  color: var(--dark-color);
 }
 
 input, p, a, button {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: var(--primary-text);
   text-decoration: none;
 }
 
 h1, h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--primary-text);
 }
 
 section {
@@ -54,7 +54,6 @@ nav {
   left: 0;
   top: -10px;
   bottom: -10px;
-  background-color: white;
   transition: 0.5s;
   padding: 100px 30px;
   max-width: 250px;
@@ -63,7 +62,13 @@ nav {
 nav:hover {
   padding-left: 35px;
   padding-right: 35px;
-  box-shadow: 2px 0px 20px -3px var(--highlight);
+  box-shadow: 2px 0px 20px -3px black;
+}
+
+#profile-pic {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 100%;
 }
 
 #nav-links {
@@ -96,19 +101,141 @@ a:hover {
   gap: 1em;
 }
 
-#profile-pic {
-  object-fit: cover;
-  width: 100%;
-  border-radius: 100%;
+#options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
 }
 
-/* home */
+/* image carousel */
+.image-carousel {
+  display: grid;
+  place-items: center;
+}
+
+.slide-container {
+  width: 100%;
+  margin-top: 0.5em;
+  height: 550px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.slide {
+  width: 100%;
+  /* max-width: 800px; */
+  height: 550px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 50%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 50%;
+  right: 2%;
+}
+
+/* start from w3 >>>>>> */
+/* rounded toggle slider */
+/* The switch - the box around the slider */
+.switch {
+  justify-self: flex-start;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--light-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--darker-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--dark-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* end from w3 >>>>>> */
+
+/* intro */
 
 main {
   margin-left: 310px;
 }
 
-#home > h1 {
+#intro > h1 {
   font-size: 4em;
   letter-spacing: 0.05em;
   margin: 0;
@@ -125,8 +252,8 @@ main {
 
 /* portfolio */
 #portfolio {
-  display: flex;
-  justify-content: center;
+  height: inherit;
+  justify-content: flex-start;
 }
 
 #works {
@@ -142,4 +269,32 @@ main {
 
 .work > p {
   line-height: 1.4em;
+}
+
+/* default mode */
+.d-background-light {
+  background-color: var(--light-color);
+}
+
+.d-text-light {
+  color: var(--dark-color);
+}
+
+.d-button-light {
+  background-color: var(--light-color);
+  color:green;
+}
+
+/* dark mode */
+.d-background-dark {
+  background-color: var(--dark-color);
+}
+
+.d-text-dark {
+  color: var(--light-color);
+}
+
+.d-button-dark {
+  background-color: var(--dark-color);
+  color:green;
 }

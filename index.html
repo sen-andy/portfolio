@@ -9,56 +9,105 @@
     <title>Andy Sen</title>
 </head>
 <body>
-    <nav class="d-light">
+    <nav class="d-background">
         <img id="profile-pic" src="./assets/profile-pic.jpeg" alt="profile picture of me" />
         <div id="nav-links">
-            <a class="d-dark" href="#home"><i class="d-dark fa-solid fa-house"></i> Home</a>
-            <a class="d-dark" href="#about-me"><i class="d-dark fa-solid fa-address-card"></i> About Me</a>
-            <a class="d-dark" href="#portfolio"><i class="d-dark fa-solid fa-pen-ruler"></i> Things I Built</a>
+            <a class="d-text" href="#home"><i class="d-text fa-solid fa-house"></i> Home</a>
+            <a class="d-text" href="#about-me"><i class="d-text fa-solid fa-address-card"></i> About Me</a>
+            <a class="d-text" href="#portfolio"><i class="d-text fa-solid fa-pen-ruler"></i> Things I Built</a>
         </div>
         <div id="social-links">
-            <a href="https://www.linkedin.com/in/andy-sen/"><i class="d-dark fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/sen-andy"><i class="d-dark fa-brands fa-square-github"></i></a>
-            <a href="mailto:andy.sen@icloud.com"><i class="d-dark fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/andy-sen/"><i class="d-text fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/sen-andy"><i class="d-text fa-brands fa-square-github"></i></a>
+            <a href="mailto:andy.sen@icloud.com"><i class="d-text fa-solid fa-envelope"></i></a>
+        </div>
+        <div id="options">
+            <h3 id="dark-label" class="d-text">Dark Mode</h3>
+            <label class="switch">
+                <input id="toggle-dark" type="checkbox">
+                <span class="slider round"></span>
+            </label>
         </div>
     </nav>
-    <main class="d-light">
-        <section id="home">
-            <h1 class="d-dark">Hi, I am Andy</h1>
-            <h1 class="d-dark">Software Developer</h1>
+    <main class="d-background">
+        <section id="intro">
+            <h1 class="d-text">Hi, I am Andy</h1>
+            <h1 class="d-text">Software Developer</h1>
         </section>
         <section id="about-me">
-            <h1 class="d-dark">About Me</h1>
-            <p class="d-dark">I've been working in information technology support for over 15 years. I taught myself how to code from online videos and tutorials. It was a hobby to start, building video games in Unity, but I quickly realized the potential. After teaching myself for 7+ years, I decided to quit my job and pursue a career as a software developer. I recently completed a full-time software developer bootcamp at Upright Education.</p>
+            <h1 class="d-text">About Me</h1>
+            <p class="d-text">I've been working in information technology support for over 15 years. I taught myself how to code from online videos and tutorials. It was a hobby to start, building video games in Unity, but I quickly realized the potential. After teaching myself for 7+ years, I decided to quit my job and pursue a career as a software developer. I recently completed a full-time software developer bootcamp at Upright Education.</p>
         </section>
         <section id="portfolio">
-            <h1 class="d-dark">Things I Built</h1>
+            <h1 class="d-text">Things I Built</h1>
             <div id="works">
                 <div class="work">
-                    <h1>BandTogther</h1>
-                    <h3>About</h3>
-                    <p>This is a social media app designed for local artists and venues to collaborate, post opportunities, and check the latest news happening in the music industry.</p>
-                    <h3>Technologies Used</h3>
-                    <p>MongoDB | Express | React | Node | AWS S3 | Leafletjs | MaterialUI</p>
-                    <h3>Links</h3>
-                    <a href="https://github.com/dhernandez39555/BandTogetherProject">Github</a>
+                    <h1 class="d-text">BandTogether</h1>
+                    <div class="image-carousel">
+                        <div class="slide-container">
+                            <div class="slide">
+                                <img src="https://source.unsplash.com/random?landscape,mountain" alt="" />
+                            </div>
+
+                            <div class="slide">
+                                <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
+                            </div>
+
+                            <div class="slide">
+                                <img src="https://source.unsplash.com/random?landscape,night" alt="" />
+                            </div>
+
+                            <div class="slide">
+                                <img src="https://source.unsplash.com/random?landscape,city" alt="" />
+                            </div>
+
+                            <button class="d-button btn btn-next"><i class="d-text fa-solid fa-arrow-right"></i></button>
+                            <button class="d-button btn btn-prev"><i class="d-text fa-solid fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="d-text">About</h3>
+                    <p class="d-text">This is a social media app designed for local artists and venues to collaborate, post opportunities, and check the latest news happening in the music industry.</p>
+                    <h3 class="d-text">Technologies Used</h3>
+                    <p class="d-text">MongoDB | Express | React | Node | AWS S3 | Leafletjs | MaterialUI</p>
+                    <h3 class="d-text">Links</h3>
+                    <a class="d-text" href="https://github.com/dhernandez39555/BandTogetherProject">Github</a>
                 </div>
                 <div class="work">
-                    <h1>Sean The Shoveler Blog</h1>
-                    <h3>About</h3>
-                    <p>This was built for Sean The Shoveler game. A simple blog hosted on an AWS EC2 ubuntu server running nginx.</p>
-                    <h3>Technologies Used</h3>
-                    <p>MongoDB | Express | React | Node | AWS EC2 | Nginx</p>
-                    <h3>Links</h3>
-                    <a href="http://18.190.25.140/">Website</a>
+                    <h1 class="d-text">Sean The Shoveler Blog</h1>
+                    <div class="image-carousel">
+                        <div class="slide-container">
+                            <div class="slide">
+                                <img src="https://source.unsplash.com/random?landscape,mountain" alt="" />
+                            </div>
+
+                            <div class="slide">
+                                <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
+                            </div>
+
+                            <div class="slide">
+                                <img src="https://source.unsplash.com/random?landscape,night" alt="" />
+                            </div>
+
+                            <div class="slide">
+                                <img src="https://source.unsplash.com/random?landscape,city" alt="" />
+                            </div>
+
+                            <button class="d-button btn btn-next"><i class="d-text fa-solid fa-arrow-right"></i></button>
+                            <button class="d-button btn btn-prev"><i class="d-text fa-solid fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="d-text">About</h3>
+                    <p class="d-text">This was built for Sean The Shoveler game. A simple blog hosted on an AWS EC2 ubuntu server running nginx.</p>
+                    <h3 class="d-text">Technologies Used</h3>
+                    <p class="d-text">MongoDB | Express | React | Node | AWS EC2 | Nginx</p>
+                    <h3 class="d-text">Links</h3>
+                    <a class="d-text" href="http://18.190.25.140/">Website</a>
                     <br>
-                    <a href="https://github.com/sen-andy/game-blog">Github</a>
+                    <a class="d-text" href="https://github.com/sen-andy/game-blog">Github</a>
                 </div>
             </div>
         </section>
     </main>
-    <script>
-
-    </script>
+    <script type="module" src="./scripts/darkmode.js"></script>
 </body>
 </html>

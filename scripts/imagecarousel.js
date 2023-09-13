@@ -1,8 +1,10 @@
+const slides = document.querySelectorAll(".slide");
 // select next slide button
 const nextSlide = document.querySelector(".btn-next");
 // select prev slide button
 const prevSlide = document.querySelector(".btn-prev");
 
+console.log(slides);
 // current slide counter
 let curSlide = 0;
 // maximum number of slides

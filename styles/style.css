@@ -119,7 +119,7 @@ a:hover {
   margin-top: 0.5em;
   height: 550px;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .slide {

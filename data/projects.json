@@ -1,0 +1,55 @@
+[
+    {
+        "name": "BandTogether",
+        "about": "This is a social media app designed for local artists and venues to collaborate, post opportunities, and check the latest news happening in the music industry.",
+        "images": [
+            "https://source.unsplash.com/random?landscape,mountain",
+            "https://source.unsplash.com/random?landscape,cars",
+            "https://source.unsplash.com/random?landscape,night",
+            "https://source.unsplash.com/random?landscape,city"
+        ],
+        "technologies": [
+            "MongoDB",
+            "Express",
+            "React",
+            "Node",
+            "AWS S3",
+            "Leaflet",
+            "MaterialUI"
+        ],
+        "links": [
+            {
+                "name": "Github",
+                "link": "https://github.com/dhernandez39555/BandTogetherProject"
+            }
+        ]
+    },
+    {
+        "name": "Sean The Shoveler Blog",
+        "about": "This was built for Sean The Shoveler game. A simple blog hosted on an AWS EC2 ubuntu server running nginx.",
+        "technologies": [
+            "MongoDB",
+            "Express",
+            "React",
+            "Node",
+            "AWS EC2",
+            "Nginx"
+        ],
+        "images": [
+            "https://source.unsplash.com/random?landscape,mountain",
+            "https://source.unsplash.com/random?landscape,cars",
+            "https://source.unsplash.com/random?landscape,night",
+            "https://source.unsplash.com/random?landscape,city"
+        ],
+        "links": [
+            {
+                "name": "Website",
+                "address": "http://18.190.25.140/"
+            },
+            {
+                "name": "Github",
+                "address": "https://github.com/sen-andy/game-blog"
+            }
+        ]
+    }
+]

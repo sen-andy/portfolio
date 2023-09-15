@@ -17,13 +17,18 @@ i {
   color: var(--dark-color);
 }
 
-input, p, a, button {
+input, p, a, button, li {
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-decoration: none;
 }
 
 h1, h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: inside;
+  list-style-type: circle;
 }
 
 section {
@@ -48,20 +53,20 @@ section > h1 {
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   left: 0;
   top: -10px;
   bottom: -10px;
   transition: 0.5s;
-  padding: 100px 30px;
+  padding: 10vh 2.5vw;
   max-width: 250px;
 }
 
 nav:hover {
-  padding-left: 35px;
-  padding-right: 35px;
+  /* padding-left: 3vw; */
+  /* padding-right: 3vw; */
   box-shadow: 2px 0px 20px -3px black;
 }
 
@@ -265,6 +270,11 @@ main {
 
 #works h3 {
   margin-top: 0.5em;
+}
+
+.work {
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .work > p {

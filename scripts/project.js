@@ -12,7 +12,9 @@ const works = document.getElementById("works");
 
 export default async () => {
     const res = await fetch(projectURI);
+    console.log(res);
     const data = await res.json();
+    console.log(data);
 
     data.forEach((project, i) => {
         /* inital setup */

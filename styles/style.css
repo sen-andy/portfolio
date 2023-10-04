@@ -1,5 +1,4 @@
 /* general */
-
 :root {
   --highlight: #eb4d4b;
   --dark-color: #2f4858;
@@ -11,6 +10,12 @@
   margin: 0;
   padding: 0;
   border: none;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 i {
@@ -55,13 +60,14 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
+  position: sticky;
+  top: 0;
   left: 0;
-  top: -10px;
-  bottom: -10px;
   transition: 0.5s;
   padding: 10vh 2.5vw;
   max-width: 250px;
+  min-width: 200px;
+  max-height: 80vh;
 }
 
 nav:hover {
@@ -261,6 +267,7 @@ main {
 #portfolio {
   height: inherit;
   justify-content: flex-start;
+  margin-bottom: 5em;
 }
 
 #works {

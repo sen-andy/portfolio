@@ -12,9 +12,7 @@ const works = document.getElementById("works");
 
 export default async () => {
     const res = await fetch(projectURI);
-    console.log(res);
     const data = await res.json();
-    console.log(data);
 
     data.forEach((project, i) => {
         /* inital setup */
@@ -49,7 +47,6 @@ export default async () => {
         rightArrow.classList.add("d-text", "fa-solid", "fa-arrow-right");
 
         nextBtn.addEventListener("click", () => {
-            console.log(imageStates[i].currentSlide);
             // check if current slide is the last and reset current slide
             if (imageStates[i].currentSlide === imageStates[i].maxSlide) {
                 imageStates[i].currentSlide = 0;
@@ -61,7 +58,6 @@ export default async () => {
             Array.from(slides).forEach((slide, indx) => {
                 slide.style.transform = `translateX(${100 * (indx - imageStates[i].currentSlide)}%)`;
             });
-            console.log(imageStates[i].currentSlide);
         });
         
         let prevBtn = document.createElement("button");

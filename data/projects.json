@@ -1,7 +1,7 @@
 [
     {
         "name": "BandTogether",
-        "about": "This is a social media app designed for local artists and venues to collaborate, post opportunities, and check the latest news happening in the music industry.",
+        "about": "A social media app designed for local artists and venues to collaborate, post opportunities, and check the latest news music news happening in your local area. As musicians are on the go, we prioritized the mobile experience.",
         "images": [
             "/portfolio/assets/bandtogether/welcome.png",
             "/portfolio/assets/bandtogether/register.png",
@@ -40,10 +40,10 @@
             "Nginx"
         ],
         "images": [
-            "https://source.unsplash.com/random?landscape,mountain",
-            "https://source.unsplash.com/random?landscape,cars",
-            "https://source.unsplash.com/random?landscape,night",
-            "https://source.unsplash.com/random?landscape,city"
+            "/portfolio/assets/seanblog/home.png",
+            "/portfolio/assets/seanblog/footer.png",
+            "/portfolio/assets/seanblog/allpost.png",
+            "/portfolio/assets/seanblog/mobile.png"
         ],
         "links": [
             {

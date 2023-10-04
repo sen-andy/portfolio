@@ -36,6 +36,7 @@ export default async () => {
             let link = document.createElement("a");
             link.href = imgRef;
             link.target = "_blank";
+            link.style.textAlign = "center"
             let img = document.createElement("img");
             img.src = imgRef;
 

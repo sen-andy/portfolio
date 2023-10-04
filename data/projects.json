@@ -3,12 +3,12 @@
         "name": "BandTogether",
         "about": "This is a social media app designed for local artists and venues to collaborate, post opportunities, and check the latest news happening in the music industry.",
         "images": [
-            "/assets/bandtogether/welcome.png",
-            "/assets/bandtogether/register.png",
-            "/assets/bandtogether/profile.png",
-            "/assets/bandtogether/contacts.png",
-            "/assets/bandtogether/messaging.png",
-            "/assets/bandtogether/map-filter.png"
+            "/portfolio/assets/bandtogether/welcome.png",
+            "/portfolio/assets/bandtogether/register.png",
+            "/portfolio/assets/bandtogether/profile.png",
+            "/portfolio/assets/bandtogether/contacts.png",
+            "/portfolio/assets/bandtogether/messaging.png",
+            "/portfolio/assets/bandtogether/map-filter.png"
         ],
         "technologies": [
             "MongoDB",

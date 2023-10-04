@@ -33,10 +33,14 @@ export default async () => {
         project.images.forEach(imgRef => {
             let slide = document.createElement("div");
             slide.classList.add("slide");
+            let link = document.createElement("a");
+            link.href = imgRef;
+            link.target = "_blank";
             let img = document.createElement("img");
             img.src = imgRef;
 
-            slide.appendChild(img);
+            link.appendChild(img);
+            slide.appendChild(link);
             container.appendChild(slide);
         });
 

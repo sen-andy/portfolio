@@ -42,6 +42,7 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 1400px;
   height: 100vh;
 }
 
@@ -65,7 +66,8 @@ nav {
   left: 0;
   transition: 0.5s;
   padding: 10vh 2.5vw;
-  max-width: 250px;
+  width: 100%;
+  max-width: 260px;
   min-width: 200px;
   max-height: 80vh;
 }
@@ -245,7 +247,11 @@ input:checked + .slider:before {
 /* intro */
 
 main {
-  margin-left: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 #intro > h1 {
@@ -267,7 +273,7 @@ main {
 #portfolio {
   height: inherit;
   justify-content: flex-start;
-  margin-bottom: 5em;
+  margin: 5em 0em;
 }
 
 #works {

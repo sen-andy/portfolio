@@ -1,4 +1,4 @@
-import createProjectElements from "./project.js";
+import createProjectElements from "/portfolio/scripts/project.js";
 
 const texts = document.getElementsByClassName("d-text");
 const backgrounds = document.getElementsByClassName("d-background");

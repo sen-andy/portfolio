@@ -1,4 +1,4 @@
-const projectURI = "../data/projects.json";
+const projectURI = "/portfolio/data/projects.json";
 class imageState {
     constructor(max) {
         this.currentSlide = 0;

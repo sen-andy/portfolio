@@ -30,7 +30,7 @@ export default async () => {
         container.classList.add("slide-container");
         
         /* create and set images */
-        project.images.forEach(imgRef => {
+        project.images.forEach((imgRef, index) => {
             let slide = document.createElement("div");
             slide.classList.add("slide");
             let link = document.createElement("a");
@@ -39,6 +39,7 @@ export default async () => {
             link.style.textAlign = "center"
             let img = document.createElement("img");
             img.src = imgRef;
+            if (index == 0) img.style.zIndex = "10";
 
             link.appendChild(img);
             slide.appendChild(link);
@@ -121,6 +122,7 @@ export default async () => {
             const link = document.createElement("a");
             link.classList.add("d-text");
             link.href = linkObj.address;
+            link.target = "_blank";
             link.textContent = linkObj.name;
             item.appendChild(link);
             linkList.appendChild(item);

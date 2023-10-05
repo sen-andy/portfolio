@@ -113,7 +113,7 @@ export default async () => {
         });
 
         /* links */
-        if (links.length != 0) {
+        if (project.links.length != 0) {
             const linkTitle = document.createElement("h3");
             linkTitle.classList.add("d-text");
             linkTitle.textContent = "Links";

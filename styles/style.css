@@ -136,19 +136,23 @@ a:hover {
 }
 
 .slide {
-  width: 100%;
-  /* max-width: 800px; */
-  height: 550px;
-  position: absolute;
-  background-color: var(--darker-color);
-  transition: all 0.5s;
   display: flex;
   justify-content: center;
+  position: absolute;
+  background-color: var(--darker-color);
+  width: 100%;
+  height: 550px;
+  transition: all 0.5s;
+  overflow: hidden;
 }
 
 .slide img {
   height: 100%;
-  object-fit: contain;
+}
+
+.slide a {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {

@@ -33,12 +33,9 @@ export default async () => {
         project.images.forEach((imgRef, index) => {
             let slide = document.createElement("div");
             slide.classList.add("slide");
-            slide.style.overflow = "hidden";
             let link = document.createElement("a");
             link.href = imgRef;
             link.target = "_blank";
-            link.style.textAlign = "center";
-            link.style.width = "100%";
             let img = document.createElement("img");
             img.src = imgRef;
 

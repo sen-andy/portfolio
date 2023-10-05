@@ -55,5 +55,25 @@
                 "address": "https://github.com/sen-andy/game-blog"
             }
         ]
+    },
+    {
+        "name": "Sean The Shoveler Game - Work in Progress",
+        "about": "A 2D Platformer with 4 worlds and 4 guardians. Will Sean be able to defeat them and claim the master shovel? I have no clue.",
+        "images": [
+            "/portfolio/assets/seangame/home.png",
+            "/portfolio/assets/seangame/grass.png",
+            "/portfolio/assets/seangame/ice.png",
+            "/portfolio/assets/seangame/lava.png",
+            "/portfolio/assets/seangame/sand.png",
+            "/portfolio/assets/seangame/snow.png"
+        ],
+        "technologies": [
+            "Unity",
+            "C#",
+            "Aseprite"
+        ],
+        "links": [
+
+        ]
     }
 ]

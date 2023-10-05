@@ -113,23 +113,21 @@ export default async () => {
         });
 
         /* links */
-        if (project.links.length != 0) {
-            const linkTitle = document.createElement("h3");
-            linkTitle.classList.add("d-text");
-            linkTitle.textContent = "Links";
-            const linkList = document.createElement("ul");
-            project.links.forEach(linkObj => {
-                const item = document.createElement("li");
-                item.classList.add("d-text");
-                const link = document.createElement("a");
-                link.classList.add("d-text");
-                link.href = linkObj.address;
-                link.target = "_blank";
-                link.textContent = linkObj.name;
-                item.appendChild(link);
-                linkList.appendChild(item);
-            });
-        }
+        const linkTitle = document.createElement("h3");
+        linkTitle.classList.add("d-text");
+        linkTitle.textContent = "Links";
+        const linkList = document.createElement("ul");
+        project.links.forEach(linkObj => {
+            const item = document.createElement("li");
+            item.classList.add("d-text");
+            const link = document.createElement("a");
+            link.classList.add("d-text");
+            link.href = linkObj.address;
+            link.target = "_blank";
+            link.textContent = linkObj.name;
+            item.appendChild(link);
+            linkList.appendChild(item);
+        });
 
         works.append(
             name,

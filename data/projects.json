@@ -75,5 +75,25 @@
         "links": [
 
         ]
+    },
+    {
+        "name": "RE: Crank Sim",
+        "about": "Ever play resident evil and love that cranking sequences?",
+        "images": [
+            "/portfolio/assets/recranksim/title.png",
+            "/portfolio/assets/recranksim/menu.png",
+            "/portfolio/assets/recranksim/left.png",
+            "/portfolio/assets/recranksim/right.png",
+            "/portfolio/assets/recranksim/failed.png",
+            "/portfolio/assets/recranksim/sim.png"
+        ],
+        "technologies": [
+            "Playdate SDK",
+            "Lua",
+            "Aseprite"
+        ],
+        "links": [
+
+        ]
     }
 ]

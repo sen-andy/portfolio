@@ -57,10 +57,6 @@ section > h1 {
 /* navbar */
 
 nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   position: sticky;
   top: 0;
   left: 0;
@@ -70,6 +66,14 @@ nav {
   max-width: 260px;
   min-width: 200px;
   max-height: 80vh;
+  z-index: 10;
+}
+
+#nav-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 nav:hover {
@@ -83,6 +87,7 @@ nav:hover {
   position: fixed;
   top: 1em;
   right: 1em;
+  font-size: 2em;
 }
 
 #profile-pic {
@@ -340,7 +345,12 @@ main {
     visibility: hidden;
     position: fixed;
     bottom: 0;
-    z-index: 10;
+    box-shadow: 2px 0px 20px -3px black;
+  }
+
+  #nav-content {
+    justify-content: space-evenly;
+    padding: 0em;
   }
 
   #menu-btn {

@@ -54,6 +54,10 @@ section > h1 {
   font-weight: 900;
 }
 
+.highlight {
+  color: var(--highlight)
+}
+
 /* navbar */
 
 nav {
@@ -265,7 +269,6 @@ input:checked + .slider:before {
 /* end from w3 >>>>>> */
 
 /* intro */
-
 main {
   display: flex;
   flex-direction: column;

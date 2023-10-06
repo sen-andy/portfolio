@@ -346,11 +346,13 @@ main {
     position: fixed;
     bottom: 0;
     box-shadow: 2px 0px 20px -3px black;
+    padding: 0 2.5vw;
+    max-height: inherit;
   }
 
   #nav-content {
     justify-content: space-evenly;
-    padding: 0em;
+    height: 100%;
   }
 
   #menu-btn {

@@ -41,9 +41,9 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   max-width: 1400px;
   height: 100vh;
+  padding: 0 8vw;
 }
 
 section > h1 {
@@ -74,20 +74,22 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
 }
 
 nav:hover {
-  /* padding-left: 3vw; */
-  /* padding-right: 3vw; */
-  box-shadow: 2px 0px 20px -3px black;
+  box-shadow: 2px 0px 20px -3px var(--darker-color);
 }
 
 #menu-btn {
+  font-size: 2em;
   visibility: hidden;
   position: fixed;
   top: 1em;
-  right: 1em;
-  font-size: 2em;
+  right: 0.5em;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
 }
 
 #profile-pic {
@@ -282,7 +284,6 @@ main {
   text-align: center;
   line-height: 1.4em;
   letter-spacing: 0.07em;
-  width: 80%;
 }
 
 /* portfolio */
@@ -296,7 +297,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: 80%;
 }
 
 #works h3 {
@@ -323,7 +323,6 @@ main {
 
 .d-button-light {
   background-color: var(--light-color);
-  color:green;
 }
 
 /* dark mode */
@@ -337,7 +336,6 @@ main {
 
 .d-button-dark {
   background-color: var(--dark-color);
-  color:green;
 }
 
 @media (max-width: 480px) {
@@ -345,14 +343,17 @@ main {
     visibility: hidden;
     position: fixed;
     bottom: 0;
-    box-shadow: 2px 0px 20px -3px black;
-    padding: 0 2.5vw;
+    box-shadow: 2px 0px 20px -3px var(--darker-color);
+    padding: 0 1em;
     max-height: inherit;
+  }
+
+  section {
+    padding: 0 1em;
   }
 
   #nav-content {
     justify-content: space-evenly;
-    height: 100%;
   }
 
   #menu-btn {

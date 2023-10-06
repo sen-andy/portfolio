@@ -128,7 +128,7 @@ export default async () => {
             linkList.appendChild(item);
         });
 
-        works.append(
+        work.append(
             name,
             carousel,
             aboutTitle,
@@ -138,5 +138,7 @@ export default async () => {
             linkTitle,
             linkList,
         );
+
+        works.appendChild(work);
     });
 }

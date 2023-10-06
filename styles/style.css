@@ -89,6 +89,7 @@ nav:hover {
   right: 0.5em;
   height: 50px;
   width: 50px;
+  box-shadow: 0px 0px 4px var(--darker-color);
   border-radius: 5px;
 }
 
@@ -139,6 +140,7 @@ a:hover {
 .image-carousel {
   display: grid;
   place-items: center;
+  padding-top: 0.5em;
 }
 
 .slide-container {
@@ -296,16 +298,11 @@ main {
 #works {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
 }
 
 #works h3 {
-  margin-top: 0.5em;
-}
-
-.work {
-  padding-left: 5vw;
-  padding-right: 5vw;
+  margin-top: 1em;
 }
 
 .work > p {

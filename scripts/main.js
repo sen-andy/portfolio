@@ -9,4 +9,6 @@ menuBtn.addEventListener("click", () => {
     const menuIcon = menuBtn.getElementsByTagName("i")[0];
     menuIcon.classList.remove(isNavOpen ? "fa-sliders" : "fa-xmark");
     menuIcon.classList.add(isNavOpen ? "fa-xmark" : "fa-sliders");
+
+    document.body.style.overflowY = isNavOpen ? "hidden" : "scroll";
 });

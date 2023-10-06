@@ -78,6 +78,13 @@ nav:hover {
   box-shadow: 2px 0px 20px -3px black;
 }
 
+#menu-btn {
+  visibility: hidden;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+}
+
 #profile-pic {
   object-fit: cover;
   width: 100%;
@@ -326,4 +333,17 @@ main {
 .d-button-dark {
   background-color: var(--dark-color);
   color:green;
+}
+
+@media (max-width: 480px) {
+  nav {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  #menu-btn {
+    visibility: visible;
+  }
 }

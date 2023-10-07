@@ -67,6 +67,7 @@ nav {
   transition: 0.5s;
   padding: 10vh 2.5vw;
   width: 100%;
+  height: 100vh;
   max-width: 260px;
   min-width: 200px;
   max-height: 80vh;
@@ -312,7 +313,8 @@ main {
   line-height: 1.4em;
 }
 
-/* default mode */
+/* dark mode */
+/* light theme */
 .d-background-light {
   background-color: var(--light-color);
 }
@@ -325,7 +327,7 @@ main {
   background-color: var(--light-color);
 }
 
-/* dark mode */
+/* dark theme */
 .d-background-dark {
   background-color: var(--dark-color);
 }
@@ -336,6 +338,27 @@ main {
 
 .d-button-dark {
   background-color: var(--dark-color);
+}
+
+/* animations */
+.fade-in {
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 0.7s ease-out;
+  transition-delay: 0.4s;
+
+}
+
+.scroll-fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-height: 800px) {
+  nav {
+    padding: 0 2.5vw;
+    max-height: inherit;
+  }
 }
 
 @media (max-width: 480px) {

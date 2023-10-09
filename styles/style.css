@@ -96,6 +96,11 @@ nav:hover {
   width: 50px;
   box-shadow: 0px 0px 4px var(--darker-color);
   border-radius: 5px;
+  z-index: 11;
+}
+
+#menu-btn > i {
+  transform: translateY(2px);
 }
 
 #profile-pic {
@@ -354,6 +359,7 @@ main {
   transform: translateX(0);
 }
 
+
 @media (max-height: 800px) {
   nav {
     padding: 0 2.5vw;
@@ -380,8 +386,11 @@ main {
     visibility: hidden;
     position: fixed;
     bottom: 0;
+    opacity: 0;
     box-shadow: 2px 0px 20px -3px var(--darker-color);
     max-height: inherit;
+    transform: translateX(-300px);
+    transition: all 0.3s ease-out;
   }
   
   #nav-content {

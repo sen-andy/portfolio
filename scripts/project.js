@@ -1,4 +1,6 @@
+import setFadeAnimation from "/portfolio/scripts/anim.js";
 const projectURI = "/portfolio/data/projects.json";
+
 class imageState {
     constructor(max) {
         this.currentSlide = 0;
@@ -98,16 +100,19 @@ export default async () => {
         const aboutText = document.createElement("p");
         aboutText.classList.add("d-text");
         aboutText.textContent = project.about;
+        setFadeAnimation(aboutText);
 
         /* technologies used */
         const techTitle = document.createElement("h3");
         techTitle.classList.add("d-text");
         techTitle.textContent = "Technologies Used";
         const techList = document.createElement("ul");
-        project.technologies.forEach(tech => {
+        project.technologies.forEach((tech, index) => {
             const item = document.createElement("li");
             item.classList.add("d-text");
+            item.style.transitionDelay = `${100 * index}ms`;
             item.textContent = tech;
+            setFadeAnimation(item);
             techList.appendChild(item);
         });
 
@@ -116,14 +121,16 @@ export default async () => {
         linkTitle.classList.add("d-text");
         linkTitle.textContent = "Links";
         const linkList = document.createElement("ul");
-        project.links.forEach(linkObj => {
+        project.links.forEach((linkObj, index) => {
             const item = document.createElement("li");
             item.classList.add("d-text");
+            item.style.transitionDelay = `${100 * index}ms`;
             const link = document.createElement("a");
             link.classList.add("d-text");
             link.href = linkObj.address;
             link.target = "_blank";
             link.textContent = linkObj.name;
+            setFadeAnimation(item);
             item.appendChild(link);
             linkList.appendChild(item);
         });

@@ -1,4 +1,3 @@
-import createProjectElements from "/portfolio/scripts/project.js";
 
 const texts = document.getElementsByClassName("d-text");
 const backgrounds = document.getElementsByClassName("d-background");
@@ -6,31 +5,29 @@ const buttons = document.getElementsByClassName("d-button");
 const toggleDark = document.getElementById("toggle-dark");
 const darkLabel = document.getElementById("dark-label");
 
-const setDark = (isDark) => {
+const setDark = () => {
     Array.from(texts).forEach(txt => {
-        txt.classList.add(`d-text-${ isDark ? "dark" : "light" }`);
-        txt.classList.remove(`d-text-${ isDark ? "light" : "dark" }`);
+        txt.classList.add(`d-text-${ toggleDark.checked ? "dark" : "light" }`);
+        txt.classList.remove(`d-text-${ toggleDark.checked ? "light" : "dark" }`);
     });
 
     Array.from(backgrounds).forEach(bg => {
-        bg.classList.add(`d-background-${ isDark ? "dark" : "light" }`);
-        bg.classList.remove(`d-background-${ isDark ? "light" : "dark" }`);
+        bg.classList.add(`d-background-${ toggleDark.checked ? "dark" : "light" }`);
+        bg.classList.remove(`d-background-${ toggleDark.checked ? "light" : "dark" }`);
     });
 
     Array.from(buttons).forEach(btn => {
-        btn.classList.add(`d-button-${ isDark ? "dark" : "light" }`);
-        btn.classList.remove(`d-button-${ isDark ? "light" : "dark" }`);
+        btn.classList.add(`d-button-${ toggleDark.checked ? "dark" : "light" }`);
+        btn.classList.remove(`d-button-${ toggleDark.checked ? "light" : "dark" }`);
     });
 
-    darkLabel.textContent = `${ isDark ? "Light" : "Dark" } Mode`;
+    darkLabel.textContent = `${ toggleDark.checked ? "Light" : "Dark" } Mode`;
 }
 
 toggleDark.addEventListener("change", (e) => {
-    setDark(e.target.checked);
+    setDark();
 });
 
-start();
-async function start() {
-    await createProjectElements();
-    setDark(toggleDark.checked);
-}
+
+
+export default setDark;

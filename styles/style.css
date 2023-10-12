@@ -363,7 +363,7 @@ main {
 @media (max-height: 800px) {
   nav {
     padding: 0 2.5vw;
-    max-height: inherit;
+    max-height: 100vh;
   }
 }
 

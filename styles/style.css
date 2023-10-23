@@ -27,6 +27,11 @@ input, p, a, button, li {
   text-decoration: none;
 }
 
+button {
+  background: none;
+	border: none;
+}
+
 h1, h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -41,13 +46,13 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 1400px;
+  max-width: 1200px;
   height: 100vh;
   padding: 0 8vw;
 }
 
 section > h1 {
-  font-size: 3em;
+  font-size: 4em;
   letter-spacing: 0.06em;
   text-align: center;
   margin: 0.5em;
@@ -107,6 +112,7 @@ nav:hover {
   object-fit: cover;
   width: 100%;
   border-radius: 100%;
+  box-shadow: 0 10px 18px -10px var(--darker-color);
 }
 
 #nav-links {
@@ -149,15 +155,14 @@ a:hover {
 /* image carousel */
 .image-carousel {
   display: grid;
-  place-items: center;
-  padding-top: 0.5em;
+  aspect-ratio: 16/10;
 }
 
 .slide-container {
-  width: 100%;
   margin-top: 0.5em;
-  height: 550px;
   position: relative;
+  border-radius: 15px;
+  box-shadow: 0 10px 18px -10px var(--darker-color);
   overflow: hidden;
 }
 
@@ -167,7 +172,7 @@ a:hover {
   position: absolute;
   background-color: var(--darker-color);
   width: 100%;
-  height: 550px;
+  height: 100%;
   transition: all 0.5s;
   overflow: hidden;
 }
@@ -183,30 +188,29 @@ a:hover {
 
 .btn {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  width: 20%;
   z-index: 10px;
-  cursor: pointer;
   font-size: 18px;
-}
-
-.btn:active {
-  transform: scale(1.1);
+  transition: all 200ms ease;
 }
 
 .btn-prev {
-  top: 50%;
-  left: 2%;
+  left: 0;
+}
+
+.btn-prev:hover {
+  box-shadow: inset 20px 0 22px -20px var(--highlight);
 }
 
 .btn-next {
-  top: 50%;
-  right: 2%;
+  right: 0;
 }
 
+.btn-next:hover {
+  box-shadow: inset -20px 0 22px -20px var(--highlight);
+}
 /* start from w3 >>>>>> */
 /* rounded toggle slider */
 /* The switch - the box around the slider */
@@ -314,6 +318,11 @@ main {
   margin-top: 1em;
 }
 
+.work > h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
 .work > p {
   line-height: 1.4em;
 }
@@ -345,13 +354,19 @@ main {
   background-color: var(--dark-color);
 }
 
+/* utilities */
+.fullscreen {
+  position: fixed;
+  inset: 2em;
+  z-index: 11;
+}
+
 /* animations */
 .fade-in {
   opacity: 0;
   transform: translateX(-300px);
   transition: all 0.7s ease-out;
   transition-delay: 0.4s;
-
 }
 
 .scroll-fade-in {

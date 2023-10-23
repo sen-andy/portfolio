@@ -10,17 +10,6 @@
             "/portfolio/assets/bandtogether/messaging.png",
             "/portfolio/assets/bandtogether/map-filter.png"
         ],
-        "technologies": [
-            "MongoDB",
-            "Express",
-            "React",
-            "Node",
-            "AWS S3",
-            "Leaflet",
-            "MaterialUI",
-            "JWT",
-            "BCrypt"
-        ],
         "links": [
             {
                 "name": "Github",
@@ -31,14 +20,6 @@
     {
         "name": "Sean The Shoveler Blog",
         "about": "This was built for Sean The Shoveler game. A simple blog hosted on an AWS EC2 ubuntu server running nginx.",
-        "technologies": [
-            "MongoDB",
-            "Express",
-            "React",
-            "Node",
-            "AWS EC2",
-            "Nginx"
-        ],
         "images": [
             "/portfolio/assets/seanblog/home.png",
             "/portfolio/assets/seanblog/footer.png",
@@ -57,7 +38,7 @@
         ]
     },
     {
-        "name": "Sean The Shoveler Game - Work in Progress",
+        "name": "Sean The Shoveler Game - In Development",
         "about": "A 2D Platformer with 4 worlds and 4 guardians. Will Sean be able to defeat them and claim the master shovel? I have no clue.",
         "images": [
             "/portfolio/assets/seangame/home.png",
@@ -66,11 +47,6 @@
             "/portfolio/assets/seangame/lava.png",
             "/portfolio/assets/seangame/sand.png",
             "/portfolio/assets/seangame/snow.png"
-        ],
-        "technologies": [
-            "Unity",
-            "C#",
-            "Aseprite"
         ],
         "links": [
 
@@ -86,11 +62,6 @@
             "/portfolio/assets/recranksim/right.png",
             "/portfolio/assets/recranksim/failed.png",
             "/portfolio/assets/recranksim/sim.png"
-        ],
-        "technologies": [
-            "Playdate SDK",
-            "Lua",
-            "Aseprite"
         ],
         "links": [
 

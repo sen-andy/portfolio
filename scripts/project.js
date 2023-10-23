@@ -1,3 +1,4 @@
+// !!DIR
 import setFadeAnimation from "/portfolio/scripts/anim.js";
 const projectURI = "/portfolio/data/projects.json";
 
@@ -21,7 +22,7 @@ export default async () => {
         imageStates.push(new imageState(project.images.length));
         let work = document.createElement("div");
         work.classList.add("work");
-        let name = document.createElement("h1");
+        let name = document.createElement("h2");
         name.textContent = project.name;
         name.classList.add("d-text");
         
@@ -35,24 +36,27 @@ export default async () => {
         project.images.forEach((imgRef, index) => {
             let slide = document.createElement("div");
             slide.classList.add("slide");
-            let link = document.createElement("a");
-            link.href = imgRef;
-            link.target = "_blank";
+            slide.addEventListener("click", () => {
+                if (container.classList.contains("fullscreen")) {
+                    document.body.style.overflowY = "auto";
+                    container.classList.remove("fullscreen");
+                } else {
+                    container.classList.add("fullscreen");
+                    document.body.style.overflowY = "hidden";
+                }
+            })
             let img = document.createElement("img");
             img.src = imgRef;
 
             slide.style.transform = `translateX(${100 * index}%)`;
             
-            link.appendChild(img);
-            slide.appendChild(link);
+            slide.appendChild(img);
             container.appendChild(slide);
         });
 
         /* next and prev buttons */
         let nextBtn = document.createElement("button");
-        nextBtn.classList.add("d-button", "btn", "btn-next");
-        let rightArrow = document.createElement("i");
-        rightArrow.classList.add("d-text", "fa-solid", "fa-arrow-right");
+        nextBtn.classList.add("btn", "btn-next");
 
         nextBtn.addEventListener("click", () => {
             // check if current slide is the last and reset current slide
@@ -69,9 +73,7 @@ export default async () => {
         });
         
         let prevBtn = document.createElement("button");
-        prevBtn.classList.add("d-button", "btn", "btn-prev");
-        let leftArrow = document.createElement("i");
-        leftArrow.classList.add("d-text", "fa-solid", "fa-arrow-left");
+        prevBtn.classList.add("btn", "btn-prev");
 
         prevBtn.addEventListener("click", () => {
             // check if current slide is the last and reset current slide
@@ -86,9 +88,6 @@ export default async () => {
                 slide.style.transform = `translateX(${100 * (indx - imageStates[i].currentSlide)}%)`;
             });
         });
-
-        nextBtn.appendChild(rightArrow);
-        prevBtn.appendChild(leftArrow);
         
         container.append(nextBtn, prevBtn);
         carousel.appendChild(container);
@@ -103,18 +102,18 @@ export default async () => {
         setFadeAnimation(aboutText);
 
         /* technologies used */
-        const techTitle = document.createElement("h3");
-        techTitle.classList.add("d-text");
-        techTitle.textContent = "Technologies Used";
-        const techList = document.createElement("ul");
-        project.technologies.forEach((tech, index) => {
-            const item = document.createElement("li");
-            item.classList.add("d-text");
-            item.style.transitionDelay = `${100 * index}ms`;
-            item.textContent = tech;
-            setFadeAnimation(item);
-            techList.appendChild(item);
-        });
+        // const techTitle = document.createElement("h3");
+        // techTitle.classList.add("d-text");
+        // techTitle.textContent = "Technologies Used";
+        // const techList = document.createElement("ul");
+        // project.technologies.forEach((tech, index) => {
+        //     const item = document.createElement("li");
+        //     item.classList.add("d-text");
+        //     item.style.transitionDelay = `${100 * index}ms`;
+        //     item.textContent = tech;
+        //     setFadeAnimation(item);
+        //     techList.appendChild(item);
+        // });
 
         /* links */
         const linkTitle = document.createElement("h3");
@@ -140,8 +139,8 @@ export default async () => {
             carousel,
             aboutTitle,
             aboutText,
-            techTitle,
-            techList,
+            // techTitle,
+            // techList,
             linkTitle,
             linkList,
         );

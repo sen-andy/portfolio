@@ -1,6 +1,6 @@
 // !!DIR
-import setFadeAnimation from "/portfolio/scripts/anim.js";
-const projectURI = "/portfolio/data/projects.json";
+import setFadeAnimation from "/scripts/anim.js";
+const projectURI = "/data/projects.json";
 
 class imageState {
     constructor(max) {
@@ -31,34 +31,48 @@ export default async () => {
         carousel.classList.add("image-carousel");
         let container = document.createElement("div");
         container.classList.add("slide-container");
+
+        let imgs = [];
         
         /* create and set images */
         project.images.forEach((imgRef, index) => {
             let slide = document.createElement("div");
             slide.classList.add("slide");
-            slide.addEventListener("click", () => {
-                if (container.classList.contains("fullscreen")) {
-                    document.body.style.overflowY = "auto";
-                    container.classList.remove("fullscreen");
-                } else {
-                    container.classList.add("fullscreen");
-                    document.body.style.overflowY = "hidden";
-                }
-            })
+
             let img = document.createElement("img");
             img.src = imgRef;
 
-            slide.style.transform = `translateX(${100 * index}%)`;
+            let folderName = imgRef.split("/")[3];
+            let fileName = imgRef.split("/")[4];
+            img.alt = `${folderName} ${fileName}`;
             
+            imgs.push(img);
+            
+            slide.style.transform = `translateX(${100 * index}%)`;
             slide.appendChild(img);
             container.appendChild(slide);
         });
 
+        container.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isFullscreen = container.classList.contains("fullscreen");
+            if (isFullscreen) {
+                document.body.style.overflow = "auto";
+                container.classList.remove("fullscreen");
+            } else {
+                container.classList.add("fullscreen");
+                document.body.style.overflow = "hidden";
+            }
+            imgs.forEach(img => isFullscreen ? img.removeAttribute("style") : img.style.maxWidth = "100%");
+        })
+
         /* next and prev buttons */
         let nextBtn = document.createElement("button");
+        nextBtn.ariaLabel = "next image"
         nextBtn.classList.add("btn", "btn-next");
 
-        nextBtn.addEventListener("click", () => {
+        nextBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
             // check if current slide is the last and reset current slide
             if (imageStates[i].currentSlide === imageStates[i].maxSlide) {
                 imageStates[i].currentSlide = 0;
@@ -73,9 +87,11 @@ export default async () => {
         });
         
         let prevBtn = document.createElement("button");
+        prevBtn.ariaLabel = "previous image"
         prevBtn.classList.add("btn", "btn-prev");
 
-        prevBtn.addEventListener("click", () => {
+        prevBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
             // check if current slide is the last and reset current slide
             if (imageStates[i].currentSlide === 0) {
                 imageStates[i].currentSlide = imageStates[i].maxSlide;

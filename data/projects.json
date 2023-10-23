@@ -3,12 +3,12 @@
         "name": "BandTogether",
         "about": "A social media app designed for local artists and venues to collaborate, post opportunities, and check the latest news music news happening in your local area. As musicians are on the go, we prioritized the mobile experience.",
         "images": [
-            "/portfolio/assets/bandtogether/welcome.png",
-            "/portfolio/assets/bandtogether/register.png",
-            "/portfolio/assets/bandtogether/profile.png",
-            "/portfolio/assets/bandtogether/contacts.png",
-            "/portfolio/assets/bandtogether/messaging.png",
-            "/portfolio/assets/bandtogether/map-filter.png"
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/bandtogether/welcome.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/bandtogether/register.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/bandtogether/profile.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/bandtogether/contacts.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/bandtogether/messaging.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/bandtogether/map-filter.webp"
         ],
         "links": [
             {
@@ -21,10 +21,10 @@
         "name": "Sean The Shoveler Blog",
         "about": "This was built for Sean The Shoveler game. A simple blog hosted on an AWS EC2 ubuntu server running nginx.",
         "images": [
-            "/portfolio/assets/seanblog/home.png",
-            "/portfolio/assets/seanblog/footer.png",
-            "/portfolio/assets/seanblog/allpost.png",
-            "/portfolio/assets/seanblog/mobile.png"
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seanblog/home.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seanblog/footer.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seanblog/allpost.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seanblog/mobile.webp"
         ],
         "links": [
             {
@@ -41,12 +41,12 @@
         "name": "Sean The Shoveler Game - In Development",
         "about": "A 2D Platformer with 4 worlds and 4 guardians. Will Sean be able to defeat them and claim the master shovel? I have no clue.",
         "images": [
-            "/portfolio/assets/seangame/home.png",
-            "/portfolio/assets/seangame/grass.png",
-            "/portfolio/assets/seangame/ice.png",
-            "/portfolio/assets/seangame/lava.png",
-            "/portfolio/assets/seangame/sand.png",
-            "/portfolio/assets/seangame/snow.png"
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seangame/home.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seangame/grass.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seangame/ice.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seangame/lava.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seangame/sand.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/seangame/snow.webp"
         ],
         "links": [
 
@@ -56,12 +56,12 @@
         "name": "RE: Crank Sim",
         "about": "Ever play resident evil and love that cranking sequence?",
         "images": [
-            "/portfolio/assets/recranksim/title.png",
-            "/portfolio/assets/recranksim/menu.png",
-            "/portfolio/assets/recranksim/left.png",
-            "/portfolio/assets/recranksim/right.png",
-            "/portfolio/assets/recranksim/failed.png",
-            "/portfolio/assets/recranksim/sim.png"
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/recranksim/title.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/recranksim/menu.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/recranksim/left.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/recranksim/right.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/recranksim/failed.webp",
+            "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/recranksim/sim.webp"
         ],
         "links": [
 

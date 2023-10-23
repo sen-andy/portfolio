@@ -1,6 +1,6 @@
 // !!DIR
-import createProjectElements from "/scripts/project.js";
-import setDark from "/scripts/darkmode.js";
+import createProjectElements from "/portfolio/scripts/project.js";
+import setDark from "/portfolio/scripts/darkmode.js";
 
 const menuBtn = document.getElementById("menu-btn");
 const nav = document.getElementsByTagName("nav")[0];

@@ -1,6 +1,6 @@
 // !!DIR
-import setFadeAnimation from "/scripts/anim.js";
-const projectURI = "/data/projects.json";
+import setFadeAnimation from "/portfolio/scripts/anim.js";
+const projectURI = "/portfolio/data/projects.json";
 
 class imageState {
     constructor(max) {

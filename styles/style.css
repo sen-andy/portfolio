@@ -400,6 +400,7 @@ main {
 .fade-in {
   opacity: 0;
   transform: translateX(-300px);
+  transition: transform .4s linear, opacity .8s linear;
   transition-delay: 0.5s;
 }
 

@@ -117,20 +117,6 @@ export default async () => {
         aboutText.textContent = project.about;
         setFadeAnimation(aboutText);
 
-        /* technologies used */
-        // const techTitle = document.createElement("h3");
-        // techTitle.classList.add("d-text");
-        // techTitle.textContent = "Technologies Used";
-        // const techList = document.createElement("ul");
-        // project.technologies.forEach((tech, index) => {
-        //     const item = document.createElement("li");
-        //     item.classList.add("d-text");
-        //     item.style.transitionDelay = `${100 * index}ms`;
-        //     item.textContent = tech;
-        //     setFadeAnimation(item);
-        //     techList.appendChild(item);
-        // });
-
         /* links */
         const linkTitle = document.createElement("h3");
         linkTitle.classList.add("d-text");
@@ -155,8 +141,6 @@ export default async () => {
             carousel,
             aboutTitle,
             aboutText,
-            // techTitle,
-            // techList,
             linkTitle,
             linkList,
         );

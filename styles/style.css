@@ -1,8 +1,9 @@
 /* general */
 :root {
-  --highlight: #eb4d4b;
+  --highlight-color: #eb4d4b;
   --dark-color: #2f4858;
   --darker-color: #172b38;
+  --grey-color: #CCC;
   --light-color: #E1ECF4;
 }
 
@@ -20,11 +21,17 @@ body {
 
 i {
   color: var(--dark-color);
+  transition: color 0.3s ease-in-out;
 }
 
 input, p, a, button, li {
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a {
+  color: var(--dark-color);
 }
 
 button {
@@ -60,7 +67,7 @@ section > h1 {
 }
 
 .highlight {
-  color: var(--highlight)
+  color: var(--highlight-color)
 }
 
 /* navbar */
@@ -69,14 +76,19 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
-  transition: 0.5s;
   padding: 10vh 2.5vw;
   width: 100%;
-  /* height: 100vh; */
   max-width: 260px;
   min-width: 200px;
   max-height: 80vh;
-  z-index: 10;
+  z-index: 20;
+  background-color: var(--light-color);
+  transform: translateX(0);
+  transition: transform .4s, opacity .4s ease-out, box-shadow 0.5s, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+nav:hover {
+  box-shadow: 2px 0px 20px -3px var(--darker-color);
 }
 
 #nav-content {
@@ -87,9 +99,6 @@ nav {
   height: 100%;
 }
 
-nav:hover {
-  box-shadow: 2px 0px 20px -3px var(--darker-color);
-}
 
 #menu-btn {
   font-size: 2em;
@@ -142,7 +151,7 @@ nav:hover {
 
 #social-links > a > i:hover,
 a:hover {
-  color: var(--highlight);
+  color: var(--highlight-color);
 }
 
 #social-links {
@@ -198,7 +207,7 @@ a:hover {
   top: 0;
   bottom: 0;
   width: 20%;
-  z-index: 10px;
+  z-index: 10;
   font-size: 18px;
   transition: all 200ms ease;
 }
@@ -208,7 +217,7 @@ a:hover {
 }
 
 .btn-prev:hover {
-  box-shadow: inset 20px 0 22px -20px var(--highlight);
+  box-shadow: inset 20px 0 22px -20px var(--highlight-color);
   cursor: pointer;
 }
 
@@ -217,7 +226,7 @@ a:hover {
 }
 
 .btn-next:hover {
-  box-shadow: inset -20px 0 22px -20px var(--highlight);
+  box-shadow: inset -20px 0 22px -20px var(--highlight-color);
   cursor: pointer;
 }
 /* start from w3 >>>>>> */
@@ -246,9 +255,13 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--grey-color);
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.slider:hover {
+  background-color: var(--highlight-color);
 }
 
 .slider:before {
@@ -294,6 +307,8 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: var(--light-color);
+  transition: background-color 0.3s ease-in-out;
 }
 
 #intro > h1 {
@@ -366,8 +381,8 @@ main {
 /* utilities */
 .fullscreen {
   position: fixed;
-  inset: 2em;
   z-index: 11;
+  inset: 2em;
 }
 
 .fullscreen::before {
@@ -385,7 +400,6 @@ main {
 .fade-in {
   opacity: 0;
   transform: translateX(-300px);
-  transition: all 0.5s ease-out;
   transition-delay: 0.5s;
 }
 
@@ -418,14 +432,12 @@ main {
 
 @media (max-width: 980px) {
   nav {
-    visibility: hidden;
     position: fixed;
     bottom: 0;
     opacity: 0;
     box-shadow: 2px 0px 20px -3px var(--darker-color);
     max-height: inherit;
     transform: translateX(-300px);
-    transition: all 0.3s ease-out;
   }
   
   #nav-content {

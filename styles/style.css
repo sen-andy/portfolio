@@ -1,8 +1,8 @@
 /* general */
 :root {
   --highlight-color: #eb4d4b;
-  --dark-color: #2f4858;
-  --darker-color: #172b38;
+  --dark-color: #172b38;
+  --darker-color: #2f4858;
   --grey-color: #CCC;
   --light-color: #E1ECF4;
 }
@@ -46,6 +46,10 @@ h1, h2, h3 {
 ul {
   list-style: inside;
   list-style-type: circle;
+}
+
+img {
+  height: auto;
 }
 
 section {
@@ -110,7 +114,7 @@ nav:hover {
   width: 50px;
   box-shadow: 0px 0px 4px var(--darker-color);
   border-radius: 5px;
-  z-index: 11;
+  z-index: 12;
 }
 
 #menu-btn > i {
@@ -122,6 +126,12 @@ nav:hover {
   width: 100%;
   border-radius: 100%;
   box-shadow: 0 10px 18px -10px var(--darker-color);
+  transition: all .4s;
+}
+
+#profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 22px -5px var(--highlight-color);
 }
 
 #nav-links {
@@ -150,6 +160,8 @@ nav:hover {
 }
 
 #social-links > a > i:hover,
+#nav-links > a:hover i,
+#nav-links > a i:hover,
 a:hover {
   color: var(--highlight-color);
 }
@@ -273,11 +285,19 @@ a:hover {
   bottom: 4px;
   background-color: var(--light-color);
   -webkit-transition: .4s;
-  transition: .4s;
+  transition: .4s ease-out;
 }
 
 input:checked + .slider {
   background-color: var(--darker-color);
+}
+
+input:checked + .slider:before {
+  background-color: var(--dark-color);
+}
+
+input:checked + .slider:hover {
+  background-color: var(--highlight-color);
 }
 
 input:focus + .slider {
@@ -311,7 +331,7 @@ main {
   transition: background-color 0.3s ease-in-out;
 }
 
-#intro > h1 {
+#top > h1 {
   font-size: 4em;
   letter-spacing: 0.05em;
   margin: 0;
@@ -326,7 +346,7 @@ main {
 }
 
 /* portfolio */
-#portfolio {
+#projects {
   height: inherit;
   justify-content: flex-start;
   margin: 5em 0em;
@@ -381,7 +401,7 @@ main {
 /* utilities */
 .fullscreen {
   position: fixed;
-  z-index: 11;
+  z-index: 100;
   inset: 2em;
 }
 
@@ -400,7 +420,14 @@ main {
 .fade-in {
   opacity: 0;
   transform: translateX(-300px);
-  transition: transform .4s linear, opacity .8s linear;
+  transition: transform .4s ease-in, opacity .6s linear;
+  transition-delay: 0.5s;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: transform .4s ease-in, opacity .6s linear;
   transition-delay: 0.5s;
 }
 

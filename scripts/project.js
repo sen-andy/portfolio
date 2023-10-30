@@ -12,6 +12,14 @@ class imageState {
 let imageStates = [];
 
 const works = document.getElementById("works");
+const workEls = [];
+
+export const loadNextProject = () => {
+    if (workEls.length === 0) return true;
+    const nextWork = workEls.pop();
+    setFadeAnimation(nextWork, 'up');
+    works.appendChild(nextWork);
+}
 
 export default async () => {
     const res = await fetch(projectURI);
@@ -45,16 +53,20 @@ export default async () => {
             let folderName = imgRef.split("/")[3];
             let fileName = imgRef.split("/")[4];
             img.alt = `${folderName} ${fileName}`;
+            if (index === 0) {
+                img.loading = 'lazy';
+            }
             
             imgs.push(img);
             
-            slide.style.transform = `translateX(${100 * index}%)`;
+            slide.style.transform = `translateX(${110 * index}%)`;
             slide.appendChild(img);
             container.appendChild(slide);
         });
 
         container.addEventListener("click", (e) => {
             e.stopPropagation();
+            work.classList.remove("fade-up", "scroll-fade-in");
             const isFullscreen = container.classList.contains("fullscreen");
             if (isFullscreen) {
                 document.body.style.overflow = "auto";
@@ -82,7 +94,7 @@ export default async () => {
             //   move slide by -100%
             const slides = container.getElementsByClassName("slide");
             Array.from(slides).forEach((slide, indx) => {
-                slide.style.transform = `translateX(${100 * (indx - imageStates[i].currentSlide)}%)`;
+                slide.style.transform = `translateX(${110 * (indx - imageStates[i].currentSlide)}%)`;
             });
         });
         
@@ -101,7 +113,7 @@ export default async () => {
             //   move slide by -100%
             const slides = container.getElementsByClassName("slide");
             Array.from(slides).forEach((slide, indx) => {
-                slide.style.transform = `translateX(${100 * (indx - imageStates[i].currentSlide)}%)`;
+                slide.style.transform = `translateX(${110 * (indx - imageStates[i].currentSlide)}%)`;
             });
         });
         
@@ -115,7 +127,7 @@ export default async () => {
         const aboutText = document.createElement("p");
         aboutText.classList.add("d-text");
         aboutText.textContent = project.about;
-        setFadeAnimation(aboutText);
+        setFadeAnimation(aboutText, 'in');
 
         /* links */
         const linkTitle = document.createElement("h3");
@@ -125,13 +137,13 @@ export default async () => {
         project.links.forEach((linkObj, index) => {
             const item = document.createElement("li");
             item.classList.add("d-text");
-            item.style.transitionDelay = `${100 * index}ms`;
+            item.style.transitionDelay = `${100 * (index + 7)}ms`;
             const link = document.createElement("a");
             link.classList.add("d-text");
             link.href = linkObj.address;
             link.target = "_blank";
             link.textContent = linkObj.name;
-            setFadeAnimation(item);
+            setFadeAnimation(item, 'in');
             item.appendChild(link);
             linkList.appendChild(item);
         });
@@ -145,6 +157,6 @@ export default async () => {
             linkList,
         );
 
-        works.appendChild(work);
+        workEls.unshift(work);
     });
 }

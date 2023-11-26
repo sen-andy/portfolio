@@ -30,6 +30,8 @@ export default async () => {
         imageStates.push(new imageState(project.images.length));
         let work = document.createElement("div");
         work.classList.add("work");
+        if (i === 0) works.appendChild(work);
+        else workEls.unshift(work);
         let name = document.createElement("h2");
         name.textContent = project.name;
         name.classList.add("d-text");
@@ -157,6 +159,5 @@ export default async () => {
             linkList,
         );
 
-        workEls.unshift(work);
     });
 }

@@ -64,7 +64,10 @@
             "https://aws-seantheshoveler.s3.us-east-2.amazonaws.com/recranksim/sim.webp"
         ],
         "links": [
-
+            {
+                "name": "itch.io",
+                "address": "https://jigglesen.itch.io/re-crank-sim"
+            }
         ]
     }
 ]
